@@ -70,3 +70,7 @@ dmypy.json
 *.iml
 *.ipr
 *.iws
+
+
+# Ignore virtual environment
+venv/
