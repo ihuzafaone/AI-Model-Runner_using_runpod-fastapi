@@ -1,0 +1,72 @@
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Environment variables
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS Finder
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.cache
+
+# Bandit
+.bandit
+
+# SQLAlchemy
+*.db
+
+# PyCharm
+.idea/
+
+# Custom
+*.env
+*.local
+
+# Pycharm project files
+*.iml
+*.ipr
+*.iws
