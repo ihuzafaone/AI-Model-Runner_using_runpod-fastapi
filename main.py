@@ -20,11 +20,10 @@ LLAMA_ENDPOINT_ID = os.environ.get("LLAMA_ENDPOINT_ID")
 LLAMA_API_KEY = os.environ.get("LLAMA_API_KEY")
 LLAMA_URI = f"https://api.runpod.ai/v2/{LLAMA_ENDPOINT_ID}/run"
 
-# Hardcoded valid API key for user authentication (can also load from environment)
-VALID_API_KEY = os.environ.get("MY_API_KEY")  # Set this in your .env
+# valid API key for user authenticatio
+VALID_API_KEY = os.environ.get("MY_API_KEY")  
 
 
-# Dependency function to check API key passed by the user
 def verify_api_key(x_api_key: str = Header()):
     if x_api_key != VALID_API_KEY:
         raise HTTPException(status_code=403, detail="Invalid API Key")
@@ -91,8 +90,6 @@ def stream_output(task_id: str, model: str):
             elif response.status_code >= 400:
                 logging.error(response.json())
                 raise HTTPException(status_code=response.status_code, detail="Error fetching task status")
-            # Sleep for 2 seconds between each request
-            sleep(2)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
